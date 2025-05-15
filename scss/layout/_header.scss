@@ -1,0 +1,63 @@
+@use "../utilities/variables" as *;
+
+header {
+    background-color: $color-primario;
+    padding: 0.5rem 2rem;
+    position: sticky;
+    top: 0px;
+    z-index: 1000;
+
+    #header-logo {
+        width: 150px;
+    }
+
+    .navbar-toggler {
+        color: $color-secundario;
+    }
+
+    .nav-item {
+        a {
+            color: $color-secundario;
+            font-weight: bold;
+            transition: color 0.3s;
+
+            &:hover {
+                color: $color-terciario;
+            }
+        }
+    }
+}
+
+@media (max-width: 768px) {
+    header {
+        padding: 0 1rem;
+    }
+
+    .header__menu {
+        ul {
+            display: none;
+        }
+    }
+
+    .header__menu.active {
+        ul {
+            display: flex;
+            flex-direction: column;
+            position: absolute;
+            top: 60px;
+            right: 0;
+            background-color: $color-primario;
+            width: 100%;
+            padding: 1rem 0;
+
+            li {
+                margin-right: 0;
+                margin-bottom: 1rem;
+            }
+
+            a {
+                color: $color-secundario;
+            }
+        }
+    }
+}

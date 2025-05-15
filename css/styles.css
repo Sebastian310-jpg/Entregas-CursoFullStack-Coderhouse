@@ -1,9 +1,9 @@
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap");
 
 :root {
     --primary-color: #151415;
-    --secondary-color: #FEFEFF;
-    --third-color: #D62033;
+    --secondary-color: #fefeff;
+    --third-color: #d62033;
 }
 
 * {
@@ -22,7 +22,7 @@ body {
 /* ------ HEADER SECTION - DESKTOP ------ */
 header {
     background-color: var(--primary-color);
-    padding: .5rem 2rem;
+    padding: 0.5rem 2rem;
     position: sticky;
     top: 0px;
     z-index: 1000;
@@ -35,7 +35,7 @@ header {
 header .nav-item a {
     color: var(--secondary-color);
     font-weight: bold;
-    transition: color .3s;
+    transition: color 0.3s;
 }
 
 header .nav-item a:hover {
@@ -131,7 +131,7 @@ main {
         "item3 item5 item7"
         "item3 item6 item7";
 }
-  
+
 .main__grid-item {
     background-color: var(--third-color);
     color: white;
@@ -185,11 +185,11 @@ main {
         padding: 10px;
         grid-template-columns: repeat(2, 1fr);
         grid-template-areas:
-        "item1 item2"
-        "item3 item4"
-        "item3 item5"
-        "item6 item6"
-        "item7 item7";
+            "item1 item2"
+            "item3 item4"
+            "item3 item5"
+            "item6 item6"
+            "item7 item7";
     }
 
     .main__grid-container div {
@@ -215,7 +215,7 @@ main {
     cursor: pointer;
 }
 
-.section__skill-container div img{
+.section__skill-container div img {
     width: 110px;
     height: 110px;
     object-fit: contain;
@@ -234,7 +234,7 @@ main {
         margin-bottom: 20px;
     }
 
-    .section__skill-container div img{
+    .section__skill-container div img {
         width: 80px;
         height: 80px;
     }
@@ -286,7 +286,7 @@ main {
     z-index: -1;
 }
 
-.main__principal-new img{
+.main__principal-new img {
     position: absolute;
     width: 100%;
     height: 100%;
@@ -294,7 +294,7 @@ main {
     z-index: -10;
 }
 
-.main__principal-new p{
+.main__principal-new p {
     position: absolute;
     background-color: var(--primary-color);
     color: var(--secondary-color);
@@ -428,12 +428,12 @@ main {
     opacity: 0.75;
 }
 
-
 /* ------ MAIN SECTION - CONTACTO - MOBILE ------ */
 @media (max-width: 768px) {
     .form__form {
         border: none;
     }
+
     .main__form {
         padding: 0;
     }
@@ -448,7 +448,6 @@ main {
         margin: 4px 0;
     }
 }
-
 
 /* ------ FOOTER SECTION - DESKTOP ------ */
 .footer {
@@ -483,15 +482,15 @@ main {
     margin-top: 50px;
 }
 
-.footer__links-container a{
+.footer__links-container a {
     font-size: 40px;
     margin: 10px;
     margin-left: 0;
     color: var(--secondary-color);
-    transition: color .3s;
+    transition: color 0.3s;
 }
 
-.footer__links-container a:hover{
+.footer__links-container a:hover {
     color: var(--third-color);
 }
 

@@ -1,0 +1,14 @@
+// Utilities
+@use "utilities/variables";
+@use "utilities/globals";
+
+// Layout
+@use "layout/header";
+@use "layout/footer";
+
+// Pages
+@use "pages/index";
+@use "pages/habilidades";
+@use "pages/proyectos";
+@use "pages/noticias";
+@use "pages/contacto";

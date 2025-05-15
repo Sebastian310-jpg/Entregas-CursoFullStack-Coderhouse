@@ -1,0 +1,84 @@
+@use "../utilities/variables" as *;
+@use "../utilities/mixins" as *;
+
+.main__grid-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(3, auto);
+    gap: 10px;
+    padding: 20px;
+    height: 100dvh;
+    max-width: 80%;
+    margin: 0 auto;
+    box-sizing: border-box;
+    grid-template-areas:
+        "item1 item1 item2"
+        "item3 item4 item4"
+        "item3 item5 item7"
+        "item3 item6 item7";
+
+    .main__grid-item {
+        background-color: $color-terciario;
+        color: white;
+        font-size: 24px;
+        font-weight: bold;
+        text-align: center;
+        padding: 40px 0;
+        border-radius: 10px;
+        box-shadow: 2px 2px 4px $color-primario;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        text-align: center
+    }
+
+    .item1 {
+        @include item-grid(to right, #ccff33, #38b000, black, item1, 1s);
+    }
+
+    .item2 {
+        @include item-grid(to left, #0466c8, #023e7d, white, item2, 1s);
+    }
+
+    .item3 {
+        @include item-grid(to top, #f72585, #7209b7, white, item3, 2s);
+    }
+
+    .item4 {
+        @include item-grid(to right, #d00000, #f96900, black, item4, 2s);
+    }
+
+    .item5 {
+        @include item-grid(to left, #ff9e00, #ff6d00, white, item5, 3s);
+    }
+
+    .item6 {
+        @include item-grid(to right, #90caf9, #2196f3, black, item6, 4s);
+    }
+
+    .item7 {
+        @include item-grid(to bottom, #2dc653, #1a7431, white, item7, 3s);
+    }
+}
+
+@media (max-width: 768px) {
+    .main__grid-container {
+        width: 100%;
+        padding: 10px;
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-areas:
+            "item1 item2"
+            "item3 item4"
+            "item3 item5"
+            "item6 item6"
+            "item7 item7";
+
+        .item6 {
+            @include item-grid(to right, #90caf9, #2196f3, black, item6, 3s);
+        }
+
+        .item7 {
+            @include item-grid(to bottom, #2dc653, #1a7431, white, item7, 4s);
+        }
+    }
+}

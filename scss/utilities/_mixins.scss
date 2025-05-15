@@ -1,0 +1,14 @@
+@use "variables" as *;
+
+@mixin item-grid($gradient-direction, $gradient-color1, $gradient-color2, $color-text, $grid-area, $animation-duration: 2s) {
+    background: linear-gradient($gradient-direction, $gradient-color1, $gradient-color2);
+    color: $color-text;
+    grid-area: $grid-area;
+    animation: bounceInUp $animation-duration;
+
+    &:hover {
+        transform: scale(1.02);
+    }
+}
+
+// no se me ocurrio nada mas para ponerle un mixin

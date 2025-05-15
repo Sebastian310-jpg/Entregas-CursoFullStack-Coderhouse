@@ -1,0 +1,48 @@
+@use "../utilities/variables" as *;
+@use "../utilities/mixins" as *;
+
+.main__skills-container {
+    display: flex;
+    justify-content: space-between;
+    margin: 0 250px;
+    gap: 20px;
+
+    .section__skill-container {
+        border: 2px, solid, $color-primario;
+        border-radius: 10px;
+        font-weight: bold;
+        display: inline-block;
+        text-align: center;
+        padding: 10px;
+        cursor: pointer;
+
+        &:hover {
+            transform: scale(1.2);
+        }
+
+        img {
+            width: 110px;
+            height: 110px;
+            object-fit: contain;
+        }
+    }
+}
+
+@media (max-width: 768px) {
+    .main__skills-container {
+        flex-direction: column;
+        margin: 0 20px;
+
+        .section__skill-container {
+            width: 100%;
+            padding: 10px 0;
+            margin-bottom: 20px;
+
+            img {
+                width: 80px;
+                height: 80px;
+            }
+        }
+
+    }
+}
